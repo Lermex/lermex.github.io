@@ -1,0 +1,61 @@
+@charset "utf-8";
+@import "normalize";
+
+body {
+  background: #364347;
+  color: white;
+
+  text-align: center;
+  font-family: "SourceSansProExtraLight", "SourceSansPro", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  color: #ECC561;
+}
+
+.container-dark {
+    background: #9175bd;
+}
+
+.footer {
+  background: #ECC561;
+
+  color: #364347;
+
+  width: 100%;
+
+  position: absolute;
+  bottom: 0;
+}
+
+.navbar {
+  //  min-height: 36px;
+}
+
+.navbar span {
+  display: block;
+
+ // padding-top: 10px;
+ // padding-bottom: 10px;
+
+  color: white;
+}
+
+.card {
+  border-radius: 3px;
+  //color: rgba(0,0,0, 0.87);
+  background: #2D373B;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);  
+}
+
+#testcard {
+  width: 400px;
+  margin: 50px auto;
+  padding: 50px;
+  padding-top: 20px;
+}
