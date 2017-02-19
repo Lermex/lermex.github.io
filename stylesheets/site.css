@@ -128,7 +128,7 @@ dfn {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 h1 {
-  font-size: 2em;
+  font-size: 3em;
   margin: 0.67em 0; }
 
 /**
@@ -365,39 +365,61 @@ textarea {
   /* 2 */ }
 
 body {
-  background: #364347;
+  /*background: #364347;*/
+  background: #222;
   color: white;
-  text-align: center;
-  font-family: "SourceSansProExtraLight", "SourceSansPro", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1em; }
+  /*text-align: center;*/
+  /*font-family: "SourceSansProExtraLight", "SourceSansPro", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  font-family: 'Raleway', sans-serif;
+  font-size: 17px;
+}
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #983BFF;
+  /*color: #A10AFF;*/
+}
 
 h1, h2, h3 {
-  color: #ECC561; }
+  /*color: #ECC561;*/
+  font-family: 'Playfair Display', serif;
+  font-weight: normal;
+}
 
 .container-dark {
   background: #9175bd; }
 
-.footer {
+/*.footer {
   background: #ECC561;
   color: #364347;
   width: 100%;
-  position: absolute;
-  bottom: 0; }
+}*/
 
 .navbar span {
   display: block;
   color: white; }
 
-.card {
-  border-radius: 3px;
-  background: #2D373B;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12); }
+.card,
+.footer {
+  padding: 20px 50px 50px;
+}
 
-#testcard {
-  width: 400px;
-  margin: 50px auto;
-  padding: 50px;
-  padding-top: 20px; }
+.footer {
+  color: #ddd;
+}
+
+.card {
+  /*border-radius: 3px;*/
+  background: #fff;
+  color: #222;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.card:nth-child(even) {
+  background: #f5f5f5;
+}
+
+.card-inner {
+  max-width: 40em;
+  margin: 0 auto;
+}
