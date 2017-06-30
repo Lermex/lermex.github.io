@@ -12,18 +12,111 @@
 
   <link href="/stylesheets/site.css" rel="stylesheet" />
   <script src="/javascripts/all.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+
+  <script>
+      $(function() {
+          function smoothScroll(el, to, duration) {
+              if (duration < 0) {
+                  return;
+              }
+              var difference = to - $(window).scrollTop();
+              var perTick = difference / duration * 10;
+              this.scrollToTimerCache = setTimeout(function() {
+                  if (!isNaN(parseInt(perTick, 10))) {
+                      window.scrollTo(0, $(window).scrollTop() + perTick);
+                      smoothScroll(el, to, duration - 10);
+                  }
+              }.bind(this), 10);
+          }
+          $('.scrollTo').on('click', function(e) {
+              e.preventDefault();
+              smoothScroll($(window), $($(e.currentTarget).attr('href')).offset().top, 200);
+          });
+      });
+  </script>
 </head>
 
 <body class="index">
-  <div class='card' id='testcard'>
+  <nav class='card main-menu'>
     <div class='card-inner'>
+      <ul>
+        <li><a class="scrollTo" href="#about">About</a></li>
+        <li><a class="scrollTo" href="#projects">Projects</a></li>
+        <li><a class="scrollTo" href="#cv">Curriculum Vitae</a></li>
+        <li><a class="scrollTo" href="#contacts">Contacts</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class='card' id='about'>
+    <div class='card-inner'>
+      <div class="profile-photo-wrapper">
+        <img class="profile-photo" src="images/photo.jpg">
+      </div>
       <h1>Sviatoslav Chumakov</h1>
       <p>I write JavaScript and Java code and design software architecture. I'm also exploring less mainstream
       software development with languages like Haskell and Rust. Sometimes I also teach programming classes.</p>
       <p>Right now I'm employed at Epam Systems in Kraków, Poland.</p>
     </div>
   </div>
-  <div class='card' id='card2'>
+  <div class='card' id="projects">
+    <div class='card-inner'>
+      <h2>Projects <span class="heading-note">(This section is under construction)</span></h2>
+      <div class="under-construction">
+        <h3>Long <span class="heading-note">(6+ Months)</span></h3>
+        <div class="project">
+          <img class="project-preview" src="images/p1-preview.png">
+          <h4>Application Protection SaaS SPA</h4>
+          <span class="project-skillset">
+          React, Hapi, Sequilize, Amazon EC2, S3, SQS, Docker
+        </span>
+        </div>
+        <h3>Short <span class="heading-note">(<6 Months)</span></h3>
+        <div class="project">
+          <img class="project-preview" src="images/p2-preview.png">
+          <h4>Payment and Order Management Integration</h4>
+          <span class="project-skillset">
+          Express, Heroku, Stripe, Moltin, Metrilo
+        </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class='card' id="cv">
+    <div class='card-inner'>
+      <h2>Curriculum Vitae</h2>
+
+      <div class="cv-jobs">
+        <div class="cv-job">
+          <div class="job-period">2016—Now</div>
+          <h4>EPAM Systems / Arxan Technologies</h4>
+          <h3>Lead Javascript Developer</h3>
+          Designed and implemented key parts of solution architecture including a transition to AWS-based microservices.
+        </div>
+        <div class="cv-job">
+          <div class="job-period">2014—2016</div>
+          <h4>EPAM Systems / DHL Express</h4>
+          <h3>Senior Java & Javascript Developer</h3>
+          Implemented technical and architecural infrastructure for a modern SPA/CMS hybrid application with high
+          concurrent access requirements. Managed teams of 2 to 4 engineers.
+        </div>
+        <div class="cv-job">
+          <div class="job-period">2012—2014</div>
+          <h4>EPAM Systems / Home Hardware, Aer Lingus</h4>
+          <h3>Middle Java & Javascript Developer</h3>
+          Implemented major re-design for a corporate portal. Implemented high-performance cache for a public-facing
+          search service. Coordinated upgrade of a major Enterprise Service Bus with a cross-country team.
+        </div>
+        <div class="cv-job">
+          <div class="job-period">2011—2012</div>
+          <h4>GlobalLogic / Telcordia, Ericsson</h4>
+          <h3>Junior Java Developer</h3>
+          Designed and implemented major new features and integration with Unix systems for telecommunications software.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class='card' id='contacts'>
     <div class='card-inner'>
       <h2>Contacts</h2>
       You can contact me via <a href="skype:Lermex">Skype</a>,
@@ -32,7 +125,7 @@
   </div>
   <footer class='footer'>
     <div class='card-inner'>
-      Last updated in February 2017
+      Last updated in July 2017
     </div>
   </footer>
 </body>

@@ -415,11 +415,124 @@ h1, h2, h3 {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
-.card:nth-child(even) {
+.card:nth-child(odd) {
   background: #f5f5f5;
 }
 
 .card-inner {
   max-width: 40em;
   margin: 0 auto;
+}
+
+.main-menu {
+    padding: 20px 50px 20px;
+}
+
+.main-menu ul {
+  padding: 0;
+  margin: 0;
+}
+
+
+
+.main-menu a {
+  /*text-decoration: underline;*/
+  color: #222;
+  font-family: 'Playfair Display', serif;
+}
+
+.main-menu a:hover {
+    border-bottom: 1px solid #222;
+}
+
+@media (max-width: 800px) {
+  .main-menu ul {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .main-menu li {
+    display: block;
+    padding: 0 10px;
+  }
+}
+
+@media (min-width: 800px) {
+  .main-menu li {
+    display: inline-block;
+    padding: 0 10px;
+  }
+
+  .main-menu li:first-child {
+    padding-left: 0;
+  }
+}
+
+
+.profile-photo {
+  width: 205px;
+  margin-top: -15px;
+}
+
+.profile-photo-wrapper {
+  height: 200px;
+  border-radius: 100%;
+  width: 200px;
+  overflow: hidden;
+  background: red;
+  border: 1px solid #222;
+  margin-left: 20%;
+}
+
+.project-preview {
+  width: 200px;
+  height: 120px;
+  border: 1px solid #888;
+  display: inline-block;
+  float: left;
+  margin-right: 20px;
+}
+
+.project {
+  height: 130px;
+  overflow: hidden;
+}
+
+.heading-note,
+.project-skillset {
+  color: #888;
+  font-size: smaller;
+}
+
+.cv-jobs {
+  border-left: 1px solid #222;
+  margin-left: -10px;
+  padding-left: 10px;
+}
+
+.cv-job {
+  margin: 30px 0;
+  position: relative;
+}
+
+.cv-job h3,
+.cv-job h4 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.cv-job h4 {
+  color: #888;
+}
+
+.job-period {
+  position: absolute;
+  left: -100px;
+  font-size: small;
+  color: #888;
+  line-height: 20px;
+}
+
+.under-construction {
+  filter: blur(5px);
 }
