@@ -543,3 +543,27 @@ h1, h2, h3 {
      transform: rotate(-90deg);
   }
 }
+@media (max-width: 600px) {
+  .profile-photo-wrapper {
+    margin: 0 auto;
+  }
+
+  h1, #about {
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .main-menu {
+    display: flex;
+    padding: 20px 10px 20px;
+  }
+
+  .main-menu a {
+    font-size: 16px;
+  }
+
+  .main-menu li {
+    padding: 0 5px;
+  }
+}
