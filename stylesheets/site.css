@@ -531,8 +531,15 @@ h1, h2, h3 {
   font-size: small;
   color: #888;
   line-height: 20px;
+  transform-origin: top right;
 }
 
 .under-construction {
   filter: blur(5px);
+}
+
+@media (max-width: 950px) {
+  .job-period {
+     transform: rotate(-90deg);
+  }
 }
