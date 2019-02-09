@@ -1,0 +1,2 @@
+# Redirect default Netlify subdomain to primary domain
+http://hopeful-fermi-251010.netlify.com/* http://lermex.net/:splat 301!
